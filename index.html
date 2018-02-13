@@ -26,7 +26,9 @@
       var CehhCoin = CehhCoin.at('0xb54baA01B72d2116AC6FD61f6638c57D487a84F4');
       console.log(CehhCoin);
 
-      $("#button").innerText = "Claim " + CehhCoin.call().balanceOf() + " CehhCoins";
+      CehhCoin.balanceOf(web3.eth.defaultAccount, function(err, ans){
+        $("#button").innerText = "Claim " + ans.c[0] + " CehhCoins";
+      })
 
       function claim(){
         CehhCoin.claim(function(){
