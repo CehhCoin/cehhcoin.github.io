@@ -25,6 +25,11 @@
       var CehhCoin = CehhCoin.at('0xb54baA01B72d2116AC6FD61f6638c57D487a84F4');
       console.log(CehhCoin);
 
+      function claim(){
+        CehhCoin.claim(function(){
+          window.alert('claimed!');
+        });
+      }
     </script>
   </body>
 </html>
